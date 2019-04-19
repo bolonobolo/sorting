@@ -2,6 +2,8 @@
 
 # Insertion Sort script
 # Best O(n) --> Average O(n^2) --> Worst O(n^2)
+import time
+import random
 
 def insertionSort(alist):
 	for index in range(1,len(alist)):
@@ -16,6 +18,12 @@ def insertionSort(alist):
 	return alist
 
 alist = [100, 25, 2, 8, -1, 44]
+# alist = random.sample(range(1, 10000), 1000)
+
 print "[*] Unsorted list %s" % (alist)
+start = time.time()
 nlist = insertionSort(alist)
-print "[*] Sorted list %s" % (nlist)	
+end = time.time()
+
+print "[*] Sorted list %s" % (nlist)
+print "[*] Script took %s seconds" % (end - start)
