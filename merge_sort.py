@@ -33,13 +33,13 @@ def merge_sort(array):
 	right = merge_sort(array[:half])
 	return merge(left, right)
 
-array = [100, 25, 2, 8, -1, 44]
-# array = random.sample(range(1, 10000), 1000)
-print "[*] Unsorted list %s" % (array)
+# array = [100, 25, 2, 8, -1, 44]
+array = random.sample(range(1, 100000), 10000)
+# print "[*] Unsorted list %s" % (array)
 
 start = time.time()
 narray = merge_sort(array)
 end = time.time()
 
-print "[*] Sorted list %s" % (narray)
+# print "[*] Sorted list %s" % (narray)
 print "[*] Script took %s seconds" % (end - start)

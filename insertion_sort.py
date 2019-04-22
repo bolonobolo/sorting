@@ -17,13 +17,13 @@ def insertionSort(alist):
 		alist[position] = currentvalue
 	return alist
 
-alist = [100, 25, 2, 8, -1, 44]
-# alist = random.sample(range(1, 10000), 1000)
+# alist = [100, 25, 2, 8, -1, 44]
+alist = random.sample(range(1, 100000), 10000)
 
-print "[*] Unsorted list %s" % (alist)
+# print "[*] Unsorted list %s" % (alist)
 start = time.time()
 nlist = insertionSort(alist)
 end = time.time()
 
-print "[*] Sorted list %s" % (nlist)
+# print "[*] Sorted list %s" % (nlist)
 print "[*] Script took %s seconds" % (end - start)
